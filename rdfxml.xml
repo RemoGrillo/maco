@@ -1,0 +1,1329 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://remogrillo.github.io/maco/"
+     xml:base="https://remogrillo.github.io/maco/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:core="http://purl.org/vocab/frbr/core#"
+     xmlns:maco="https://remogrillo.github.io/maco/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://remogrillo.github.io/maco/">
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <terms:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</terms:description>
+        <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#date-006"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#title-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Date</rdfs:label>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://remogrillo.github.io/maco/conveys -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/conveys">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://remogrillo.github.io/maco/isConveyedBy"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/Manifest"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/NewNorm"/>
+        <rdfs:label xml:lang="en">conveys</rdfs:label>
+        <skos:definition xml:lang="en">Relativo alla visione conveys da un qualche manifesto</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/expresses -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/expresses">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://remogrillo.github.io/maco/isExpressedIn"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/Manifesto2"/>
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/ManifestoFondazione"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/InterpretedConcept"/>
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/KeyConcept"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">expresses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/guides -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/guides">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://remogrillo.github.io/maco/isGuidedBy"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/InterpretedConcept"/>
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/KeyConcept"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/ArtisticMovement"/>
+        <rdfs:label xml:lang="en">guides</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/hasAbstractionIn -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/hasAbstractionIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">has abstraction in</rdfs:label>
+        <skos:definition xml:lang="en">Key Concept has abstraction in an Interpreted Concept. From specification of a Key Concept are extracted common features to define an Interpreted Concept.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/hasDifferentObjectFrom -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/hasDifferentObjectFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">has different object from</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept has an Interpreted Concept having a different Object.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/hasEquivalentConcept -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/hasEquivalentConcept">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">has equivalent concept</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept has an equivalent concept in the compared Manifesto, embodied by the Interpreted Concept.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/hasGeneralizationIn -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/hasGeneralizationIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">has generalization in</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept has a generalization in an Interpreted Concept. A Key Concept is made suitable for a general purpose in an Interpreted Concept.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/hasOpposingEquivalent -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/hasOpposingEquivalent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">has opposing equivalent</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept has an equivalent Interpreted Concept expressed in an opposing manner.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/hasRelatedConcept -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/hasRelatedConcept">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">has related concept</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept has a related concept in the compared Manifesto, embodied by the Interpreted Concept.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/hasRelatedObject -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/hasRelatedObject">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">has related object</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept has an Interpreted Concept relating to its same object.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/hasSpecializationIn -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/hasSpecializationIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">has specialization in</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept has a specialization in an Interpreted Concept. A Key Concept is made suitable for a special purpose in an Interpreted Concept.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/inspiresStyleOf -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/inspiresStyleOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">inspires style of</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept inspires the style of an Interpreted Concept.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/isConveyedBy -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/isConveyedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/NewNorm"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/Manifest"/>
+        <rdfs:label xml:lang="en">is conveyed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/isExpressedIn -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/isExpressedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/ManifestoFondazione"/>
+        <rdfs:label xml:lang="en">is expressed in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/isGuidedBy -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/isGuidedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/ArtisticMovement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">is guided by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/isProgrammaticDefinitionOf -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/isProgrammaticDefinitionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://remogrillo.github.io/maco/isProgrammaticallyDefinedBy"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/ManifestoFondazione"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/ArtisticMovement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/isProgrammaticallyDefinedBy -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/isProgrammaticallyDefinedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/ArtisticMovement"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/Manifest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/KeyConcept"/>
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/Manifest"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/Manifest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#title-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/Manifest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/Manifest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <terms:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#date-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:label xml:lang="en">Date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/source">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/Manifest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/bulletPoint -->
+
+    <owl:DatatypeProperty rdf:about="https://remogrillo.github.io/maco/bulletPoint">
+        <rdfs:subPropertyOf rdf:resource="https://remogrillo.github.io/maco/text"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/Manifest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/paragraph -->
+
+    <owl:DatatypeProperty rdf:about="https://remogrillo.github.io/maco/paragraph">
+        <rdfs:subPropertyOf rdf:resource="https://remogrillo.github.io/maco/text"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/Manifest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/text -->
+
+    <owl:DatatypeProperty rdf:about="https://remogrillo.github.io/maco/text">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/Manifest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Testo (o parti di testo) preso in esame</rdfs:comment>
+        <rdfs:label xml:lang="en">Text</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/textReference -->
+
+    <owl:DatatypeProperty rdf:about="https://remogrillo.github.io/maco/textReference">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/InterpretedConcept"/>
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/KeyConcept"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">vhgvhgvhgvhgv</rdfs:comment>
+        <rdfs:label xml:lang="en">Text Reference</rdfs:label>
+        <skos:definition>Indicates the part of the text (sentence or single word) which expresses a particular concept.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#Expression -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/frbr/core#Expression"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/ArtisticMovement -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/ArtisticMovement">
+        <rdfs:isDefinedBy xml:lang="en">http://vocab.getty.edu/page/aat/300021374</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Futurist</rdfs:label>
+        <skos:definition xml:lang="en">Refers to the literary and artistic movement centered in Italy that emphasized speed, dynamism, energy and a rejection of the past, which began with the writings of Filippo Tommaso Marinetti in 1909. Futurism also developed in Russia, with more revolutionary and political connotations.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/Attitude -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/Attitude">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://wordnet-rdf.princeton.edu/id/06202938-n</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Attitude</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/Dynamism -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/Dynamism">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:label xml:lang="en">Dynamism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/InterpretedAttitude -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/InterpretedAttitude">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">Interpreted Attitude</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/InterpretedConcept -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/InterpretedConcept">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">Interpreted Concept</rdfs:label>
+        <skos:definition xml:lang="en">An Interpreted Concept is the interpretation of a Key Concept in the compared Manifesto.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/InterpretedDynamism -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/InterpretedDynamism">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">Interpreted Dynamism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/InterpretedRejectionOfThePast -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/InterpretedRejectionOfThePast">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">Interpreted Rejection of the past</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/InterpretedSpeed -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/InterpretedSpeed">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">Interpreted Speed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/InterpretedTechnologyRelatedConcept -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/InterpretedTechnologyRelatedConcept">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">Interpreted Technology-related concepts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/KeyConcept -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/KeyConcept">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">Key Concept</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept is a major concept expressed in the Futurism Manifesto.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/Manifest -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/Manifest">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/creator"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/date"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Manifest</rdfs:label>
+        <skos:definition xml:lang="en">A formal public written declaration of intention promulgated by an individual or a group of individuals conveying intentions, motives and views.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/Manifesto2 -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/Manifesto2">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/Manifest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://remogrillo.github.io/maco/expresses"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/ManifestoFondazione -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/ManifestoFondazione">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/Manifest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://remogrillo.github.io/maco/expresses"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/NewNorm -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/NewNorm">
+        <rdfs:label xml:lang="en">New Norm</rdfs:label>
+        <skos:definition xml:lang="en">The establishment of a set of ideas and views which revolutionize the norm, previously regarded as typical.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/RejectionOfThePast -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/RejectionOfThePast">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:label xml:lang="en">Rejection of the past</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/Speed -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/Speed">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:label xml:lang="en">Speed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/TechnologyRelatedConcepts -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/TechnologyRelatedConcepts">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://vocab.getty.edu/page/aat/300056068</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Technology-related concepts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://remogrillo.github.io/maco/actOfMoving1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/actOfMoving1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Speed"/>
+        <hasAbstractionIn rdf:resource="https://remogrillo.github.io/maco/evokedSpeed2"/>
+        <textReference>il movimento</textReference>
+        <textReference>il passo di corsa</textReference>
+        <textReference>il salto</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/activeViolence1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/activeViolence1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Attitude"/>
+        <hasAbstractionIn rdf:resource="https://remogrillo.github.io/maco/stylisticViolence2"/>
+        <hasSpecializationIn rdf:resource="https://remogrillo.github.io/maco/violentOriginality2"/>
+        <textReference>esaltare il movimento aggressivo</textReference>
+        <textReference>gesto distruttore</textReference>
+        <textReference>militarismo</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/activeness1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/activeness1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Dynamism"/>
+        <hasAbstractionIn rdf:resource="https://remogrillo.github.io/maco/evokedDynamism2"/>
+        <textReference>Bisogna che il poeta si prodighi, con ardore, sfarzo e munificenza, per aumentare l’entusiastico fervore degli elementi primordiali.</textReference>
+        <textReference>Folle agitate dal lavoro, dal piacere o dalla sommossa: canteremo le maree multicolori e polifoniche delle rivoluzioni nelle capitali moderne; canteremo il vibrante fervore notturno degli arsenali e dei cantieri incendiati da violente lune elettriche; le stazioni ingorde, divoratrici di serpi che fumano; le officine appese alle nuvole pei contorti fili dei loro fumi; i ponti simili a ginnasti giganti che scavalcano i fiumi, balenanti al sole con un luccichio di coltelli; i piroscafi avventurosi che fiutano l’orizzonte, le locomotive dall’ampio petto, che scalpitano sulle rotaie, come enormi cavalli d’acciaio imbrigliati di tubi, e il volo scivolante degli aereoplani, la cui elica garrisce al vento come una bandiera e sembra applaudire come una folla entusiasta.</textReference>
+        <textReference>La poesia deve essere concepita come un violento assalto</textReference>
+        <textReference>Non v’è più bellezza, se non nella lotta.</textReference>
+        <textReference>Vogliamo esaltare il movimento aggressivo, l’insonnia febbrile, il passo di corsa, il salto mortale, lo schiaffo ed il pugno.</textReference>
+        <textReference>carattere aggressivo</textReference>
+        <textReference>l’abitudine all’energia e alla temerità.</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/agent1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/agent1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/TechnologyRelatedConcepts"/>
+        <hasGeneralizationIn rdf:resource="https://remogrillo.github.io/maco/technologicalInnovation2"/>
+        <isExpressedIn rdf:resource="https://remogrillo.github.io/maco/m1"/>
+        <textReference>all’uomo che tiene il volante, la cui asta ideale attraversa la Terra, lanciata a corsa</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/agentExperiencingSpeed1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/agentExperiencingSpeed1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Speed"/>
+        <isExpressedIn rdf:resource="https://remogrillo.github.io/maco/m1"/>
+        <textReference>all’uomo che tiene il volante, la cui asta ideale attraversa la Terra, lanciata a corsa</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/approval1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/approval1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Attitude"/>
+        <hasEquivalentConcept rdf:resource="https://remogrillo.github.io/maco/approval2"/>
+        <hasRelatedObject rdf:resource="https://remogrillo.github.io/maco/approval2"/>
+        <textReference>esaltare il movimento aggressivo</textReference>
+        <textReference>esaltare l’insonnia febbrile</textReference>
+        <textReference>gesto distruttore</textReference>
+        <textReference>glorificare</textReference>
+        <textReference>inneggiare</textReference>
+        <textReference>militarismo</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/approval2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/approval2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/InterpretedAttitude"/>
+        <textReference>rendere e magnificare</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/artOfThePast2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/artOfThePast2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/InterpretedRejectionOfThePast"/>
+        <textReference>Considerare i critici d’arte come inutili o dannosi</textReference>
+        <textReference>Disprezzare profondamente ogni forma di imitazione</textReference>
+        <textReference>Distruggere il culto del passato, l’ossessione dell’antico, il pedantismo e il formalismo accademico</textReference>
+        <textReference>Ribellarci contro la tirannia delle parole: armonia e buon gusto, espressioni troppo elastiche, con le quali si potrebbe demolire l’opera di Rembrandt e quella di Goya.</textReference>
+        <textReference>Spazzar via dal campo ideale dell’arte tutti i motivi, tutti i soggetti gia sfruttati.</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/assertiveness2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/assertiveness2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/InterpretedAttitude"/>
+        <textReference>demolire</textReference>
+        <textReference>distruggere</textReference>
+        <textReference>esaltare</textReference>
+        <textReference>spazzar via</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/assetiveness1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/assetiveness1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Attitude"/>
+        <hasOpposingEquivalent rdf:resource="https://remogrillo.github.io/maco/assertiveness2"/>
+        <textReference>affermiamo</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/boldnessAndCourage1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/boldnessAndCourage1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Attitude"/>
+        <hasRelatedConcept rdf:resource="https://remogrillo.github.io/maco/boldnessAndCourage2"/>
+        <textReference>Il coraggio</textReference>
+        <textReference>Noi vogliamo cantare l’amor del pericolo</textReference>
+        <textReference>l’audacia</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/boldnessAndCourage2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/boldnessAndCourage2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/InterpretedAttitude"/>
+        <textReference>coraggio</textReference>
+        <textReference>largo ai temerari</textReference>
+        <textReference>temeraria</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/contemptFofImitation2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/contemptFofImitation2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/InterpretedAttitude"/>
+        <textReference>disprezzo imitazione</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/contemptForWomen1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/contemptForWomen1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Attitude"/>
+        <hasDifferentObjectFrom rdf:resource="https://remogrillo.github.io/maco/contemptFofImitation2"/>
+        <textReference>il disprezzo della donna</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/cultureOfThePast1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/cultureOfThePast1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/RejectionOfThePast"/>
+        <hasSpecializationIn rdf:resource="https://remogrillo.github.io/maco/artOfThePast2"/>
+        <textReference>Noi vogliamo distruggere i musei, le biblioteche, le accademie d’ogni specie</textReference>
+        <textReference>Vittoria di Samotracia</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/energeticDrive1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/energeticDrive1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Attitude"/>
+        <hasSpecializationIn rdf:resource="https://remogrillo.github.io/maco/originality2"/>
+        <hasSpecializationIn rdf:resource="https://remogrillo.github.io/maco/vitalityOfYouth2"/>
+        <textReference>Bisogna che il poeta si prodighi, con ardore, sfarzo e munificenza, per aumentare l’entusiastico fervore degli elementi primordiali</textReference>
+        <textReference>abitudine all’energia</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/evokedDynamism2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/evokedDynamism2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Dynamism"/>
+        <textReference>incessantemente e tumultuosamente</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/evokedSpeed2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/evokedSpeed2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/InterpretedSpeed"/>
+        <textReference>incessantemente e tumultuosamente</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/m1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/m1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/ManifestoFondazione"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/actOfMoving1"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/activeViolence1"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/activeness1"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/agentExperiencingSpeed1"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/approval1"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/assetiveness1"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/boldnessAndCourage1"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/contemptForWomen1"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/cultureOfThePast1"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/past1"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/patriotism1"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/place1"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/rebellion1"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/societyOfThePast1"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/speedVehicle1"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/stylisticDynamism1"/>
+        <dc:title>Fondazione e Manifesto del futurismo</dc:title>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/page/Filippo_Tommaso_Marinetti</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1909-02-20</terms:date>
+        <bulletPoint>1. Noi vogliamo cantare l’amor del pericolo, l’abitudine all’energia e alla temerità.
+
+2. Il coraggio, l’audacia, la ribellione, saranno elementi essenziali della nostra poesia.
+
+3. La letteratura esaltò fino ad oggi l’immobilità pensosa, l’estasi e il sonno. Noi vogliamo esaltare il movimento aggressivo, l’insonnia febbrile, il passo di corsa, il salto mortale, lo schiaffo ed il pugno.
+
+4. Noi affermiamo che la magnificenza del mondo si è arricchita di una bellezza nuova: la bellezza della velocità. Un automobile da corsa col suo cofano adorno di grossi tubi simili a serpenti dall’alito esplosivo.... un automobile ruggente, che sembra correre sulla mitraglia, è più bello della Vittoria di Samotracia.
+
+5. Noi vogliamo inneggiare all’uomo che tiene il volante, la cui asta ideale attraversa la Terra, lanciata a corsa, essa pure, sul circuito della sua orbita.
+
+6. Bisogna che il poeta si prodighi, con ardore, sfarzo e munificenza, per aumentare l’entusiastico fervore degli elementi primordiali.
+
+7. Non v’è più bellezza, se non nella lotta. Nessuna opera che non abbia un carattere aggressivo può essere un capolavoro. La poesia deve essere concepita come un violento assalto contro le forze ignote, per ridurle a prostrarsi davanti all’uomo.
+
+8. Noi siamo sul promontorio estremo dei secoli!.. Perchè dovremmo guardarci alle spalle, se vogliamo sfondare le misteriose porte dell’Impossibile? Il Tempo e lo Spazio morirono ieri. Noi viviamo già nell’assoluto, poichè abbiamo già creata l’eterna velocità onnipresente.
+
+9. Noi vogliamo glorificare la guerra — sola igiene del mondo — il militarismo, il patriottismo, il gesto distruttore dei libertarî, le belle idee per cui si muore e il disprezzo della donna. [p. 7 modifica]
+
+10. Noi vogliamo distruggere i musei, le biblioteche, le accademie d’ogni specie, e combattere contro il moralismo, il femminismo e contro ogni viltà opportunistica o utilitaria.
+
+11. Noi canteremo le grandi folle agitate dal lavoro, dal piacere o dalla sommossa: canteremo le maree multicolori e polifoniche delle rivoluzioni nelle capitali moderne; canteremo il vibrante fervore notturno degli arsenali e dei cantieri incendiati da violente lune elettriche; le stazioni ingorde, divoratrici di serpi che fumano; le officine appese alle nuvole pei contorti fili dei loro fumi; i ponti simili a ginnasti giganti che scavalcano i fiumi, balenanti al sole con un luccichio di coltelli; i piroscafi avventurosi che fiutano l’orizzonte, le locomotive dall’ampio petto, che scalpitano sulle rotaie, come enormi cavalli d’acciaio imbrigliati di tubi, e il volo scivolante degli aereoplani, la cui elica garrisce al vento come una bandiera e sembra applaudire come una folla entusiasta.</bulletPoint>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/m2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/m2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Manifesto2"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/approval2"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/artOfThePast2"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/assertiveness2"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/boldnessAndCourage2"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/contemptFofImitation2"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/evokedDynamism2"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/evokedSpeed2"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/originality2"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/past2"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/pride2"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/rebellion2"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/stylisticDynamism2"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/stylisticViolence2"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/technologicalInnovation2"/>
+        <expresses rdf:resource="https://remogrillo.github.io/maco/violentOriginality2"/>
+        <dc:title>Manifesto dei pittori futuristi</dc:title>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/page/Carlo_Carr%C3%A0</terms:creator>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/page/Giacomo_Balla</terms:creator>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/page/Luigi_Russolo</terms:creator>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/page/Umberto_Boccioni</terms:creator>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://pt.dbpedia.org/page/Gino_Severini</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1911-02-11</terms:date>
+        <bulletPoint>Ed ecco le nostre conclusioni recise: Con questa entusiastica adesione al futurismo, noi vogliamo:
+
+1. Distruggere il culto del passato, l’ossessione dell’antico, il pedantismo e il formalismo accademico, 2. Disprezzare profondamente ogni forma di imitazione.
+
+3. Esaltare ogni forma di originalità, anche se temeraria, anche se violentissima.
+
+4. Trarre coraggio ed orgoglio dalla facile taccia di pazzia con cui si sferzano e s’imbavagliano gl’innovatori.
+
+5. Considerare i critici d’arte come inutili o dannosi.
+
+6. Ribellarci contro la tirannia delle parole: [p. 26 modifica]armonia e buon gusto, espressioni troppo elastiche, con le quali si potrebbe facilmente demolire l’opera di Rembrandt e quella di Goya.
+
+7. Spazzar via dal campo ideale dell’arte tutti i motivi, tutti i soggetti già sfruttati.
+
+8. Rendere e magnificare la vita odierna, incessantemente e tumultuosamente trasformata dalla scienza vittoriosa.
+
+Siano sepolti i morti nelle piú profonde viscere della terra! Sia sgombra di mummie la soglia del futuro! Largo ai giovani, ai violenti, ai temerari!</bulletPoint>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/originality2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/originality2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/InterpretedAttitude"/>
+        <textReference>largo ai giovani</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/past1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/past1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/RejectionOfThePast"/>
+        <hasEquivalentConcept rdf:resource="https://remogrillo.github.io/maco/past2"/>
+        <textReference>Noi siamo sul promontorio estremo dei secoli!.. Perche dovremmo guardarci alle spalle, se vogliamo sfondare le misteriose porte dell’Impossibile? Il Tempo e lo Spazio morirono ieri.</textReference>
+        <textReference>immobilità pensosa</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/past2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/past2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/InterpretedRejectionOfThePast"/>
+        <textReference>Siano sepolti i morti nelle piu profonde viscere della terra! Sia sgombra di mummie la soglia del futuro! Largo ai giovani, ai violenti, ai temerari!</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/patriotism1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/patriotism1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Attitude"/>
+        <hasDifferentObjectFrom rdf:resource="https://remogrillo.github.io/maco/pride2"/>
+        <textReference>patriottismo</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/place1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/place1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/TechnologyRelatedConcepts"/>
+        <hasGeneralizationIn rdf:resource="https://remogrillo.github.io/maco/technologicalInnovation2"/>
+        <isExpressedIn rdf:resource="https://remogrillo.github.io/maco/m1"/>
+        <textReference>arsenali</textReference>
+        <textReference>cantieri</textReference>
+        <textReference>capitali moderne</textReference>
+        <textReference>elica</textReference>
+        <textReference>ponti</textReference>
+        <textReference>rotaie, come enormi cavalli d’acciaio imbrigliati di tubi</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/pride2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/pride2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/InterpretedAttitude"/>
+        <textReference>orgoglio</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/rebellion1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/rebellion1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Attitude"/>
+        <hasEquivalentConcept rdf:resource="https://remogrillo.github.io/maco/rebellion2"/>
+        <textReference>la ribellione</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/rebellion2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/rebellion2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/InterpretedAttitude"/>
+        <textReference>ribellarci</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/societyOfThePast1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/societyOfThePast1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/RejectionOfThePast"/>
+        <textReference>combattere contro il moralismo, il femminismo e contro ogni vilta opportunistica o utilitaria</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/speed1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/speed1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Speed"/>
+        <hasAbstractionIn rdf:resource="https://remogrillo.github.io/maco/evokedSpeed2"/>
+        <textReference>la bellezza della velocità.</textReference>
+        <textReference>l’eterna velocità onnipresente.</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/speedVehicle1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/speedVehicle1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Speed"/>
+        <textReference>Un automobile da corsa</textReference>
+        <textReference>le locomotive dall’ampio petto, che scalpitano sulle rotaie</textReference>
+        <textReference>un automobile ruggente, che sembra correre sulla mitraglia</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/stylisticDynamism1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/stylisticDynamism1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Dynamism"/>
+        <inspiresStyleOf rdf:resource="https://remogrillo.github.io/maco/stylisticDynamism2"/>
+        <textReference>Bisogna che il poeta si prodighi, con ardore, sfarzo e munificenza, per aumentare l’entusiastico fervore degli elementi primordiali.</textReference>
+        <textReference>Folle agitate dal lavoro, dal piacere o dalla sommossa: canteremo le maree multicolori e polifoniche delle rivoluzioni nelle capitali moderne; canteremo il vibrante fervore notturno degli arsenali e dei cantieri incendiati da violente lune elettriche; le stazioni ingorde, divoratrici di serpi che fumano; le officine appese alle nuvole pei contorti fili dei loro fumi; i ponti simili a ginnasti giganti che scavalcano i fiumi, balenanti al sole con un luccichio di coltelli; i piroscafi avventurosi che fiutano l’orizzonte, le locomotive dall’ampio petto, che scalpitano sulle rotaie, come enormi cavalli d’acciaio imbrigliati di tubi, e il volo scivolante degli aereoplani, la cui elica garrisce al vento come una bandiera e sembra applaudire come una folla entusiasta.</textReference>
+        <textReference>Vogliamo esaltare il movimento aggressivo, l’insonnia febbrile, il passo di corsa, il salto mortale, lo schiaffo ed il pugno.</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/stylisticDynamism2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/stylisticDynamism2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/InterpretedDynamism"/>
+        <textReference>incessantemente e tumultuosamente</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/stylisticViolence2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/stylisticViolence2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/InterpretedAttitude"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/technologicalInnovation2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/technologicalInnovation2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/InterpretedTechnologyRelatedConcept"/>
+        <textReference>scienza vittoriosa</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/vehicle1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/vehicle1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/TechnologyRelatedConcepts"/>
+        <hasGeneralizationIn rdf:resource="https://remogrillo.github.io/maco/technologicalInnovation2"/>
+        <isExpressedIn rdf:resource="https://remogrillo.github.io/maco/m1"/>
+        <textReference>Un automobile da corsa col suo cofano adorno di grossi tubi simili a serpenti dall’alito esplosivo…</textReference>
+        <textReference>aeroplani</textReference>
+        <textReference>locomotive</textReference>
+        <textReference>piroscafi</textReference>
+        <textReference>un automobile ruggente, che sembra correre sulla mitraglia</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/violentOriginality2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/violentOriginality2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/InterpretedAttitude"/>
+        <textReference>largo ai violenti</textReference>
+        <textReference>violentissima</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/vitalityOfYouth2 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/vitalityOfYouth2">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/Attitude"/>
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/InterpretedAttitude"/>
+        <isExpressedIn rdf:resource="https://remogrillo.github.io/maco/m2"/>
+        <textReference>largo ai giovani</textReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/">
+        <terms:publisher rdf:resource="http://purl.org/dc/aboutdcmi#DCMI"/>
+        <terms:title xml:lang="en">Dublin Core Metadata Element Set, Version 1.1</terms:title>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/contributor">
+        <rdfs:label xml:lang="en">Contributor</rdfs:label>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</terms:description>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/coverage">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#coverage-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</terms:description>
+        <rdfs:label xml:lang="en">Coverage</rdfs:label>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+        <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#description-006"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/format">
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Format</rdfs:label>
+        <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
+        <terms:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language">
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
+        <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/publisher">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#publisher-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</terms:description>
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/relation">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relation-006"/>
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <terms:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#rights-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</terms:description>
+        <rdfs:label xml:lang="en">Rights</rdfs:label>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/source">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#source-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <terms:description xml:lang="en">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/subject">
+        <terms:description xml:lang="en">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.</terms:description>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+        <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subject-007"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
+        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://remogrillo.github.io/maco/m1"/>
+            <rdf:Description rdf:about="https://remogrillo.github.io/maco/m2"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

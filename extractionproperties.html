@@ -119,7 +119,7 @@
                         Ed ecco le nostre conclusioni recise: Con questa <span class="subjectText attitude">entusiastica adesione</span> al futurismo, noi vogliamo:
                       </p>
                       <p>
-                        <span class="subjectText rejectionofthepast">1. <span class="subjectText rejectionofthepast"><span class="subjectText attitude">Distruggere</span> il culto del passato, l’ossessione dell’antico,</span> il pedantismo e il formalismo accademico,</span>
+                        1. <span class="subjectText rejectionofthepast" concept="artOfThePast2"><span class="subjectText attitude" concept="approval2">Distruggere</span> il culto del passato, l’ossessione dell’antico,</span> il pedantismo e il formalismo accademico,
                       </p><p>
                       2. <span class="subjectText rejectionofthepast"><span class="subjectText attitude">Disprezzare</span> profondamente ogni forma di imitazione.</span>
                     </p><p>
@@ -183,8 +183,6 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
 
       <style>
@@ -234,7 +232,8 @@
         }
 
         .subjectText.highlighted{
-          transition: 0.4s;
+            transition: 0.4s;
+            cursor: pointer;
         }
 
         .subjectText.highlighted.speed {
@@ -258,9 +257,44 @@
 
 
       <script>
+
+          var rapportiTraIstanze = {}
+
+          function selectTopic(clicked){
+              $.getJSON( "ontology.json", function( data ) {
+                  var collegamento = {};
+
+                  //Crea un oggetto dei rapporti
+                  $.each( data, function(key, val) {
+                      if(val['@type'][0] === "http://www.w3.org/2002/07/owl#ObjectProperty"){
+
+                      }
+                  });
+
+
+                  /*TODO:Illumina l'elemento cliccato
+                  //Trova quella proprietà che ha come oggetto l'attributo concept
+                        //collegamento.proprieta = proprietatrovata.nomeLeggibile;
+                  //Trova tutte le istanze1 che hanno quella proprietà
+                        //collegamento.istanze1.push(istanza1)
+                            //Prendi le porzioni di testo da quell'istanza
+                            // collegamento.testo1.push(porzioni di testo)
+                            */
+
+                  //Trova proprietà che targettizza quel concept
+                  $.each( data, function(key, val) {
+                      if(val['@id'] === ""){
+
+                      }
+                  });
+              });
+          }
+
+
           function highlightSubject(subject){
-              jQuery('.subjectText').removeClass('highlighted');
-              jQuery('.subjectText.' + subject).addClass('highlighted');
+              jQuery('.subjectText').removeClass('highlighted').prop("onclick", null).off("click");
+              jQuery('.subjectText.' + subject).addClass('highlighted').not('.subjectButton')
+                  .click(function(){selectTopic(jQuery(this).attr('concept'))});
           }
 
           jQuery('.subjectButton').click(function(){
@@ -270,6 +304,28 @@
               var pushedbutton = jQuery(this).attr('class').split(' ')[2];
               highlightSubject(pushedbutton);
           });
+
+          jQuery(document).ready(function(){
+              $.getJSON( "ontology.json", function( data ) {
+                  //Crea un oggetto dei rapporti
+                  $.each( data, function(key, val) {
+                      if(typeof val['@type'] !== "undefined"){
+                          if(val['@type'][0] === "http://www.w3.org/2002/07/owl#ObjectProperty" && val["http://www.w3.org/2000/01/rdf-schema#domain"][0]['@id'] === 'https://remogrillo.github.io/maco/KeyConcept'){
+                              rapportiTraIstanze[val['@id']] = {};
+                              if(typeof val['http://www.w3.org/2000/01/rdf-schema#label'] !== "undefined"){
+                                  rapportiTraIstanze[val['@id']].label = val['http://www.w3.org/2000/01/rdf-schema#label'][0]['@value'];
+                              }
+                              if(typeof val["http://www.w3.org/2004/02/skos/core#definition"] !== "undefined"){
+                                  rapportiTraIstanze[val['@id']].description = val["http://www.w3.org/2004/02/skos/core#definition"][0]['@value'];
+                              }
+                          }
+                      }
+                  });
+                  console.log(rapportiTraIstanze);
+              });
+          });
+
+
 
       </script>
     

@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
   </head>
   <body>
     
@@ -70,9 +72,9 @@
                   <div class="row">
                     <div id="colonnaSx" class="col-4">
                         <div class="card text-white bg-info mb-12">
-                            <div class="card-header">Relations with the original </div>
+                            <div class="card-header"><i class="fa fa-question-circle" aria-hidden="true"></i> Relations with the original</div>
                             <div class="card-body">
-                                <p class="card-text" id="collegamentoHeader"><i>Select a part to show its relation</i></p>
+                                <p class="card-text" id="collegamentoHeader">Select a part to show its relations</p>
                             </div>
                         </div>
                     </div>
@@ -81,29 +83,29 @@
                         Manifesto dei pittori futuristi
                       </p>
                       <p>
-                        Ed ecco le nostre conclusioni recise: Con questa <span class="subjectText attitude">entusiastica adesione</span> al futurismo, noi vogliamo:
+                        Ed ecco le nostre conclusioni recise: Con questa entusiastica adesione al futurismo, noi vogliamo:
                       </p>
                       <p>
-                        1. <span class="subjectText rejectionofthepast" concept="artOfThePast2"><span class="subjectText attitude" concept="approval2">Distruggere</span> il culto del passato, l’ossessione dell’antico,</span> il pedantismo e il formalismo accademico,
+                        1. <span class="subjectText rejectionofthepast" concept="artOfThePast2"><span class="subjectText attitude" concept="assertiveness2">Distruggere</span> il culto del passato, l’ossessione dell’antico,</span> il pedantismo e il formalismo accademico,
                       </p><p>
                       2. <span class="subjectText rejectionofthepast"><span class="subjectText attitude">Disprezzare</span> profondamente ogni forma di imitazione.</span>
                     </p><p>
-                      3. <span class="subjectText attitude">Esaltare</span> ogni forma di originalità, anche se <span class="subjectText attitude">temeraria</span>, anche se <span class="subjectText attitude">violentissima</span>.
+                      3. <span class="subjectText attitude" concept="assertiveness2">Esaltare</span> ogni forma di originalità, anche se <span class="subjectText attitude" concept="boldnessAndCourage2">temeraria</span>, anche se <span class="subjectText attitude" concept="violentOriginality2">violentissima</span>.
                     </p><p>
-                      4. <span class="subjectText attitude">Trarre coraggio ed orgoglio</span> dalla facile taccia di pazzia con cui si sferzano e s’imbavagliano
+                      4. <span class="subjectText attitude" concept="boldnessAndCourage2">Trarre coraggio ed orgoglio</span> dalla facile taccia di pazzia con cui si sferzano e s’imbavagliano
                       gl’innovatori.
                     </p><p>
                       <span class="subjectText rejectionofthepast">5. Considerare i critici d’arte come inutili o dannosi.</span>
                     </p><p>
-                      6. <span class="subjectText rejectionofthepast"><span class="subjectText attitude">Ribellarci</span> contro la tirannia delle parole: armonia e buon gusto, espressioni troppo
-            elastiche, con le quali si potrebbe facilmente <span class="subjectText attitude">demolire</span> l’opera di Rembrandt e quella di Goya.</span>
+                      6. <span class="subjectText rejectionofthepast"><span class="subjectText attitude" concept="rebellion2">Ribellarci</span> contro la tirannia delle parole: armonia e buon gusto, espressioni troppo
+            elastiche, con le quali si potrebbe facilmente <span class="subjectText attitude" concept="assertiveness2">demolire</span> l’opera di Rembrandt e quella di Goya.</span>
                     </p><p>
-                      7. <span class="subjectText rejectionofthepast"><span class="subjectText attitude">Spazzar via</span> dal campo ideale dell’arte tutti i motivi, tutti i soggetti già sfruttati.</span>
+                      7. <span class="subjectText rejectionofthepast"><span class="subjectText attitude" concept="assertiveness2">Spazzar via</span> dal campo ideale dell’arte tutti i motivi, tutti i soggetti già sfruttati.</span>
                     </p><p>
-                      8. <span class="subjectText attitude">Rendere e magnificare</span> la vita odierna, <span class="subjectText speed"><span class="subjectText dynamism">incessantemente e tumultuosamente</span></span> trasformata dalla
-                      <span class="subjectText technology">scienza vittoriosa</span>.
-                      <span class="subjectText rejectionofthepast">Siano sepolti i morti nelle piú profonde viscere della terra! Sia sgombra di mummie la soglia del
-                futuro! <span class="subjectText attitude">Largo ai giovani, ai violenti, ai temerari!</span></span>
+                      8. <span class="subjectText attitude" concept="approval2">Rendere e magnificare</span> la vita odierna, <span class="subjectText speed" concept="evokedSpeed2"><span class="subjectText dynamism" concept="evokedDynamism">incessantemente e tumultuosamente</span></span> trasformata dalla
+                      <span class="subjectText technology" concept="technologicalInnovation2">scienza vittoriosa</span>.
+                      <span class="subjectText rejectionofthepast" concept="past2">Siano sepolti i morti nelle piú profonde viscere della terra! Sia sgombra di mummie la soglia del
+                futuro! <span class="subjectText attitude" concept="boldnessAndCourage2">Largo ai giovani, ai violenti, ai temerari!</span></span>
                     </p>
                     </div>
                   </div>
@@ -244,51 +246,58 @@
           var rapportiTraIstanze = {}
 
           function selectTopic(clicked){
-              $.getJSON( "ontology.json", function( data ) {
-                  var collegamento = {};
+              if(clicked){
+                  $.getJSON( "ontologylabels.json", function( data ) {
+                      var collegamento = {};
+                      var lista = "";
+                      $.each( data, function(key, val) {
+                          //se al terzo posto la chiave è una cosa che compare tra le chiavi di rapportitraistanze
+                          var thirdkey = Object.keys(val)[3];
+                          //console.log(thirdkey);
+                          if(typeof rapportiTraIstanze[thirdkey] !== "undefined"){
+                              $.each(val[thirdkey], function(k,v){
+                                  if(v['@id'] === "https://remogrillo.github.io/maco/" + clicked){
+                                      collegamento.testo1 = [];
+                                      collegamento.rapporto = rapportiTraIstanze[thirdkey];
+                                      collegamento.keyconcept = val['@id'];
+                                      collegamento.interpretedconcept = clicked;
+
+                                      lista = '<ul class="">';
+                                      $.each(val["https://remogrillo.github.io/maco/textReference"], function(chiave,valore){
+                                          collegamento.testo1.push(valore['@value']);
+                                          lista+= '<li class="">&quot;'+ valore['@value'] +'&quot;</li>';
+                                      });
+                                      lista += '</ul>';
 
 
-                  var lista = "";
-                  $.each( data, function(key, val) {
-                      //se al terzo posto la chiave è una cosa che compare tra le chiavi di rapportitraistanze
-                      var thirdkey = Object.keys(val)[2];
-                      if(typeof rapportiTraIstanze[thirdkey] !== "undefined"){
-                          $.each(val[thirdkey], function(k,v){
-                            if(v['@id'] === "https://remogrillo.github.io/maco/" + clicked){
-                                collegamento.testo1 = [];
-                                collegamento.rapporto = rapportiTraIstanze[thirdkey];
-                                collegamento.keyconcept = val['@id'];
-                                collegamento.interpretedconcept = clicked;
+                                  }
+                              })
+                          }
+                      });
 
-                                lista = '<ul class="">';
-                                $.each(val["https://remogrillo.github.io/maco/textReference"], function(chiave,valore){
-                                    collegamento.testo1.push(valore['@value']);
-                                    lista+= '<li class="">&quot;'+ valore['@value'] +'&quot;</li>';
-                                });
-                                lista += '</ul>';
+                      //var stampare = "The concept of " + collegamento.keyconcept + " present in the first manifesto, (embodied by the expressions: <span style='font-weight: bolder'>" + collegamento.testo1.join() + ")</span>, " + collegamento.rapporto.label  + " the concept of "+ collegamento.interpretedconcept + ", which is expressed in the selected part.";
 
-
-                            }
-                        })
-                      }
+                      var stampare2 = "<h6>The selected part embodies the concept of "+ collegamento.interpretedconcept +
+                          ".</h6> In the <i>Manifesto del Futurismo</i>, the concept of  <span id='keyconceptHeader'>" + collegamento.keyconcept.replace("https://remogrillo.github.io/maco/", '') +
+                          " </span> embodied by the expressions: "+ lista + " <span id='rapportoHeader'>" +
+                          collegamento.rapporto.label  + " <span id='rapportoHeaderQuestion' title='"+ collegamento.rapporto.description + "'>(?)</span></span> the selected part.";
+                      console.log(collegamento);
+                      $('#collegamentoHeader').html(stampare2);
                   });
+              }
+          }
 
-                  //var stampare = "The concept of " + collegamento.keyconcept + " present in the first manifesto, (embodied by the expressions: <span style='font-weight: bolder'>" + collegamento.testo1.join() + ")</span>, " + collegamento.rapporto.label  + " the concept of "+ collegamento.interpretedconcept + ", which is expressed in the selected part.";
-
-                  var stampare2 = "<h6>The selected part embodies the concept of "+ collegamento.interpretedconcept +
-                      ".</h6> In the <i>Manifesto del Futurismo</i>, the concept of  <span id='keyconceptHeader'>" + collegamento.keyconcept.replace("https://remogrillo.github.io/maco/", '') +
-                      " </span> embodied by the expressions: "+ lista + " <span id='rapportoHeader'>" +
-                      collegamento.rapporto.label  + " <span id='rapportoHeaderQuestion' title='"+ collegamento.rapporto.description + "'>(?)</span></span> the selected part.";
-                  console.log(collegamento);
-                  $('#collegamentoHeader').html(stampare2);
-              });
+          function borderSelection(selection){
+              $('.highlighted').css("border", "none");
+              $(selection).css("border", "2px solid orange");
           }
 
 
           function highlightSubject(subject){
+              $('.highlighted').css("border", "none");
               jQuery('.subjectText').removeClass('highlighted').prop("onclick", null).off("click");
               jQuery('.subjectText.' + subject).addClass('highlighted').not('.subjectButton')
-                  .click(function(){selectTopic(jQuery(this).attr('concept'))});
+                  .click(function(){selectTopic(jQuery(this).attr('concept')); borderSelection(this);});
           }
 
           jQuery('.subjectButton').click(function(){

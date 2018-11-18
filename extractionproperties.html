@@ -53,12 +53,12 @@
     <!-- END nav -->
 
 
-		<section class="ftco-section">
+		<section class="ftco-section" style="padding-top: 30px;">
 				<div class="container">
                     <div class="row">
-                        <div class="col-12">
-
-                        </div>
+                            <a href="./extraction.html"><h1 class="hoveringTitle" style="color: #e0e0e0">Topics Confrontation</h1></a>
+                            <span style="background-color:grey; width:2px; height:50px; margin-left: 20px; margin-right: 20px;"></span>
+                            <a href="./extractionproperties.html" class=""><h1>Relations of concepts</h1></a>
                     </div>
                   <div class="row">
                     <div id="temiConfronto" class="col-12">
@@ -74,7 +74,7 @@
                         <div class="card text-white bg-info mb-12">
                             <div class="card-header"><i class="fa fa-question-circle" aria-hidden="true"></i> Relations with the original</div>
                             <div class="card-body">
-                                <p class="card-text" id="collegamentoHeader">Select a part to show its relations</p>
+                                <p class="card-text" id="collegamentoHeader">Select a part to show its relations to the first Manifesto of Futurism</p>
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                       <p>
                         1. <span class="subjectText rejectionofthepast" concept="artOfThePast2"><span class="subjectText attitude" concept="assertiveness2">Distruggere</span> il culto del passato, l’ossessione dell’antico,</span> il pedantismo e il formalismo accademico,
                       </p><p>
-                      2. <span class="subjectText rejectionofthepast" concept="artOfThePast2"><span class="subjectText attitude">Disprezzare</span> profondamente ogni forma di imitazione.</span>
+                      2. <span class="subjectText rejectionofthepast" concept="artOfThePast2"><span class="subjectText attitude" concept="assertiveness2">Disprezzare</span> profondamente ogni forma di imitazione.</span>
                     </p><p>
                       3. <span class="subjectText attitude" concept="assertiveness2">Esaltare</span> ogni forma di originalità, anche se <span class="subjectText attitude" concept="boldnessAndCourage2">temeraria</span>, anche se violentissima.
                     </p><p>
@@ -238,16 +238,36 @@
               cursor:help;
           }
 
+        .hoveringTitle:hover{
+            color: rgba(0, 0, 0, 0.8) !important;
+            cursor: pointer;
+        }
+
       </style>
 
 
       <script>
 
-          var rapportiTraIstanze = {}
+          var rapportiTraIstanze = {};
+          var clickedLabel = "";
+
+          function findClickedLabel(clicked){
+              $.getJSON( "ontologyjsonnewlabels.json", function( data ) {
+                  $.each( data, function(key, val) {
+                      if(val["@id"] === "https://remogrillo.github.io/maco/" + clicked){
+                          console.log(val["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"]);
+                          clickedLabel = val["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"];
+                      }
+                  });
+              });
+          }
 
           function selectTopic(clicked){
+
+              findClickedLabel(clicked);
+
               if(clicked){
-                  $.getJSON( "ontologylabels.json", function( data ) {
+                  $.getJSON( "ontologyjsonnewlabels.json", function( data ) {
                       var collegamento = {};
                       var lista = "";
                       $.each( data, function(key, val) {
@@ -259,8 +279,8 @@
                                   if(v['@id'] === "https://remogrillo.github.io/maco/" + clicked){
                                       collegamento.testo1 = [];
                                       collegamento.rapporto = rapportiTraIstanze[thirdkey];
-                                      collegamento.keyconcept = val['@id'];
-                                      collegamento.interpretedconcept = clicked;
+                                      collegamento.keyconcept = val["http://www.w3.org/2000/01/rdf-schema#label"][0]['@value'];
+                                      collegamento.interpretedconcept = clickedLabel;
 
                                       lista = '<ul class="">';
                                       $.each(val["https://remogrillo.github.io/maco/textReference"], function(chiave,valore){
@@ -268,8 +288,6 @@
                                           lista+= '<li class="">&quot;'+ valore['@value'] +'&quot;</li>';
                                       });
                                       lista += '</ul>';
-
-
                                   }
                               })
                           }
@@ -278,8 +296,8 @@
                       //var stampare = "The concept of " + collegamento.keyconcept + " present in the first manifesto, (embodied by the expressions: <span style='font-weight: bolder'>" + collegamento.testo1.join() + ")</span>, " + collegamento.rapporto.label  + " the concept of "+ collegamento.interpretedconcept + ", which is expressed in the selected part.";
 
                       var stampare2 = "<h6>The selected part embodies the concept of "+ collegamento.interpretedconcept +
-                          ".</h6> In the <i>Manifesto del Futurismo</i>, the concept of  <span id='keyconceptHeader'>" + collegamento.keyconcept.replace("https://remogrillo.github.io/maco/", '') +
-                          " </span> embodied by the expressions: "+ lista + " <span id='rapportoHeader'>" +
+                          ".</h6> In the original Manifesto del Futurismo, the concept of  <span id='keyconceptHeader'>" + collegamento.keyconcept.replace("https://remogrillo.github.io/maco/", '') +
+                          " </span> is embodied by the expressions: "+ lista + collegamento.keyconcept.replace("https://remogrillo.github.io/maco/", '') + " <span id='rapportoHeader'>" +
                           collegamento.rapporto.label  + " <span id='rapportoHeaderQuestion' title='"+ collegamento.rapporto.description + "'>(?)</span></span> the selected part.";
                       console.log(collegamento);
                       $('#collegamentoHeader').html(stampare2);
@@ -289,7 +307,7 @@
 
           function borderSelection(selection){
               $('.highlighted').css("border", "none");
-              $(selection).css("border", "2px solid orange");
+              $(selection).css("border", "2px solid black");
           }
 
 

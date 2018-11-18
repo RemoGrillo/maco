@@ -51,8 +51,13 @@
     <!-- END nav -->
 
 
-		<section class="ftco-section">
+		<section class="ftco-section" style="padding-top: 30px;">
 				<div class="container">
+                    <div class="row">
+                        <a href="./extraction.html"><h1>Topics Confrontation</h1></a>
+                        <span style="background-color:grey; width:2px; height:50px; margin-left: 20px; margin-right: 20px;"></span>
+                        <a href="./extractionproperties.html" class=""><h1 class="hoveringTitle" style="color: #e0e0e0">Relations of concepts</h1></a>
+                    </div>
                   <div class="row">
                     <div id="temiConfronto" class="col-12">
                       <a class="subjectButton subjectText speed">Speed</a>
@@ -183,8 +188,6 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
 
       <style>
@@ -254,6 +257,11 @@
           background-color: rgba(213, 120, 218, 0.77);
         }
 
+          .hoveringTitle:hover{
+              color: rgba(0, 0, 0, 0.8) !important;
+              cursor: pointer;
+          }
+
       </style>
 
 
@@ -270,6 +278,7 @@
               var pushedbutton = jQuery(this).attr('class').split(' ')[2];
               highlightSubject(pushedbutton);
           });
+
 
       </script>
     

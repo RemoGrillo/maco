@@ -145,6 +145,7 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
+    cursor:pointer;
     color: #34c0e7;
     text-decoration: underline; }
 

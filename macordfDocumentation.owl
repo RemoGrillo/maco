@@ -1,0 +1,883 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://remogrillo.github.io/maco/"
+     xml:base="https://remogrillo.github.io/maco/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:core="http://purl.org/vocab/frbr/core#"
+     xmlns:maco="https://remogrillo.github.io/maco/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://remogrillo.github.io/maco/">
+        <owl:versionIRI rdf:resource="https://remogrillo.github.io/maco/"/>
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alessandra Foschi</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caterina Morelli</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elena Domenicucci</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remo Grillo</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-11-18</dc:date>
+        <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).</dc:rights>
+        <terms:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</terms:description>
+        <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#date-006"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#title-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <terms:title xml:lang="en">MaCo, (Futurist) Manifest Comparison</terms:title>
+        <rdfs:comment xml:lang="en">MaCo, is an ontology for describing the relations among concepts expressed in the Manifesto del Futurismo and another Futurist Manifesto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This ontology is available at https://remogrillo.github.io/maco/, and uses the namespace prefix maco.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Date</rdfs:label>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</owl:versionInfo>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+        <terms:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#rights-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Rights</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://remogrillo.github.io/maco/conveys -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/conveys">
+        <owl:inverseOf rdf:resource="https://remogrillo.github.io/maco/isConveyedBy"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/M00"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/NewNorm"/>
+        <rdfs:label xml:lang="en">conveys</rdfs:label>
+        <skos:definition xml:lang="en">A Manifesto conveys a New Norm.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/expresses -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/expresses">
+        <owl:inverseOf rdf:resource="https://remogrillo.github.io/maco/isExpressedIn"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/M00"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/InterpretedConcept"/>
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/KeyConcept"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">expresses</rdfs:label>
+        <skos:definition xml:lang="en">A Manifesto expresses Key Concept or Interpreted Concept. If expresses one, cannot express the other.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/givesShapeTo -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/givesShapeTo">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/M00"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/ArtisticMovement"/>
+        <rdfs:label xml:lang="en">gives shape to</rdfs:label>
+        <skos:definition xml:lang="en">What is Futurist as a whole, is determined and somehow regulated by the 22 Futurist Manifestos all together.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/guides -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/guides">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/InterpretedConcept"/>
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/KeyConcept"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/ArtisticMovement"/>
+        <rdfs:label xml:lang="en">guides</rdfs:label>
+        <skos:definition xml:lang="en">Key Concept and Interpreted Concept guides Futurist.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/hasAbstractionIn -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/hasAbstractionIn">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">has abstraction in</rdfs:label>
+        <skos:definition xml:lang="en">Key Concept has abstraction in an Interpreted Concept. From specification of a Key Concept are extracted common features to define an Interpreted Concept.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/hasDifferentObjectFrom -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/hasDifferentObjectFrom">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">has different object from</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept has an Interpreted Concept having a different Object.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/hasEquivalentConcept -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/hasEquivalentConcept">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">has equivalent concept</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept has an equivalent concept in the compared Manifesto, embodied by the Interpreted Concept.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/hasGeneralizationIn -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/hasGeneralizationIn">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">has generalization in</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept has a generalization in an Interpreted Concept. A Key Concept is made suitable for a general purpose in an Interpreted Concept.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/hasOpposingEquivalent -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/hasOpposingEquivalent">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">has opposing equivalent</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept has an equivalent Interpreted Concept expressed in an opposing manner.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/hasRelatedConcept -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/hasRelatedConcept">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">has related concept</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept has a related concept in the compared Manifesto, embodied by the Interpreted Concept.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/hasRelatedObject -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/hasRelatedObject">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">has related object</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept has an Interpreted Concept relating to its same object.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/hasSpecializationIn -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/hasSpecializationIn">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">has specialization in</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept has a specialization in an Interpreted Concept. A Key Concept is made suitable for a special purpose in an Interpreted Concept.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/inspiresStyleOf -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/inspiresStyleOf">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">inspires style of</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept inspires the style of an Interpreted Concept.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/isComparedTo -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/isComparedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/M02"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/M01"/>
+        <rdfs:label xml:lang="en">is compared to</rdfs:label>
+        <skos:definition xml:lang="en">Compares any Futurist Manifesto to the Manifesto of Futurism.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/isConveyedBy -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/isConveyedBy">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/NewNorm"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/M00"/>
+        <rdfs:label xml:lang="en">is conveyed by</rdfs:label>
+        <skos:definition xml:lang="en">New Norm is conveyed by a Manifesto.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/isExpressedIn -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/isExpressedIn">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/InterpretedConcept"/>
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/KeyConcept"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/M00"/>
+        <rdfs:label xml:lang="en">is expressed in</rdfs:label>
+        <skos:definition xml:lang="en">Key Concept or Interpreted is expressed in Manifesto.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/isGuidedBy -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/isGuidedBy">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/ArtisticMovement"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/InterpretedConcept"/>
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/KeyConcept"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">is guided by</rdfs:label>
+        <skos:definition xml:lang="en">Futurist is guided by Key Concept and Interpreted Concept.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/isProgrammaticDefinitionOf -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/isProgrammaticDefinitionOf">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/M01"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/ArtisticMovement"/>
+        <rdfs:label xml:lang="en">is programmatic definition of</rdfs:label>
+        <skos:definition xml:lang="en">Manifesto of Futurism is the programmatic definition of Futurist.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/isRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="https://remogrillo.github.io/maco/isRelatedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/M02"/>
+        <rdfs:range rdf:resource="https://remogrillo.github.io/maco/M01"/>
+        <rdfs:label xml:lang="en">is related to</rdfs:label>
+        <skos:definition xml:lang="en">Relates any Futurist Manifesto to the Manifesto of Futurism.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/KeyConcept"/>
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/M00"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/M00"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#title-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/M00"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/M00"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <terms:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#date-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:label xml:lang="en">Date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/source">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/M00"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/numberedList -->
+
+    <owl:DatatypeProperty rdf:about="https://remogrillo.github.io/maco/numberedList">
+        <rdfs:subPropertyOf rdf:resource="https://remogrillo.github.io/maco/text"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/M00"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Part of text structered as numbered points.</rdfs:comment>
+        <rdfs:label xml:lang="en">Numbered List</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/paragraph -->
+
+    <owl:DatatypeProperty rdf:about="https://remogrillo.github.io/maco/paragraph">
+        <rdfs:subPropertyOf rdf:resource="https://remogrillo.github.io/maco/text"/>
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/M00"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Subdivisions of a text intended to separate ideas.</rdfs:comment>
+        <rdfs:label xml:lang="en">Paragraph</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/text -->
+
+    <owl:DatatypeProperty rdf:about="https://remogrillo.github.io/maco/text">
+        <rdfs:domain rdf:resource="https://remogrillo.github.io/maco/M00"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The main body of a written work.</rdfs:comment>
+        <rdfs:label xml:lang="en">Text</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/textReference -->
+
+    <owl:DatatypeProperty rdf:about="https://remogrillo.github.io/maco/textReference">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/InterpretedConcept"/>
+                    <rdf:Description rdf:about="https://remogrillo.github.io/maco/KeyConcept"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Indicates the part of the text (sentence or single word) which expresses a particular concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">Text Reference</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#Expression -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/frbr/core#Expression"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/ArtisticMovement -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/ArtisticMovement">
+        <rdfs:isDefinedBy xml:lang="en">http://vocab.getty.edu/page/aat/300021374</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Futurist</rdfs:label>
+        <skos:definition xml:lang="en">Refers to the literary and artistic movement centered in Italy that emphasized speed, dynamism, energy and a rejection of the past, which began with the writings of Filippo Tommaso Marinetti in 1909. Futurism also developed in Russia, with more revolutionary and political connotations.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/Attitude -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/Attitude">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://wordnet-rdf.princeton.edu/id/06202938-n</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Attitude</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/Dynamism -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/Dynamism">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:label xml:lang="en">Dynamism</rdfs:label>
+        <skos:definition xml:lang="en">The quality of being characterized by vigorous activity, energy, vitality which results in rapidity of action and decision.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/InterpretedAttitude -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/InterpretedAttitude">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">Interpreted Attitude</rdfs:label>
+        <skos:definition xml:lang="en">An Interpreted Attitude is the interpretation of Key Attitude in the compared Futurist Manifesto.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/InterpretedConcept -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/InterpretedConcept">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">Interpreted Concept</rdfs:label>
+        <skos:definition xml:lang="en">An Interpreted Concept is the interpretation of a Key Concept in the compared Manifesto.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/InterpretedDynamism -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/InterpretedDynamism">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">Interpreted Dynamism</rdfs:label>
+        <skos:definition xml:lang="en">An Interpreted Dynamism is the interpretation of Key Dynamism in the compared Futurist Manifesto.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/InterpretedRejectionOfThePast -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/InterpretedRejectionOfThePast">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">Interpreted Rejection of the past</rdfs:label>
+        <skos:definition xml:lang="en">An Interpreted Rejection of the past is the interpretation of Key Rejection of the past in the compared Futurist Manifesto.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/InterpretedSpeed -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/InterpretedSpeed">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">Interpreted Speed</rdfs:label>
+        <skos:definition xml:lang="en">An Interpreted Speed is the interpretation of Key Speed in the compared Futurist Manifesto.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/InterpretedTechnologyRelatedConcept -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/InterpretedTechnologyRelatedConcept">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+        <rdfs:label xml:lang="en">Interpreted Technology-related concept</rdfs:label>
+        <skos:definition xml:lang="en">An Interpreted Technology-related concepts is the interpretation of Key Technology-related concepts in the compared Futurist Manifesto.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/KeyConcept -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/KeyConcept">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">Key Concept</rdfs:label>
+        <skos:definition xml:lang="en">A Key Concept is a major concept expressed in the Futurism Manifesto.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/M00 -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/M00">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/creator"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/date"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Manifesto</rdfs:label>
+        <skos:definition xml:lang="en">Public written declarations of intention promulgated by an individual or a group of individuals conveying intentions, motives and views.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/M01 -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/M01">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/M00"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://remogrillo.github.io/maco/expresses"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Manifesto of Futurism</rdfs:label>
+        <skos:definition xml:lang="en">Writings of Filippo Tommaso Marinetti which programmatically defines the intentiones, motives and views of the literary and artistic movement so-called Futurist.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/M02 -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/M02">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/M00"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://remogrillo.github.io/maco/expresses"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://remogrillo.github.io/maco/InterpretedConcept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Futurist Manifestos</rdfs:label>
+        <skos:definition xml:lang="en">Public written declarations of intention promulgated by Futurist artists conveying intentions, motives and views.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/NewNorm -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/NewNorm">
+        <rdfs:label xml:lang="en">New Norm</rdfs:label>
+        <skos:definition xml:lang="en">The establishment of a set of ideas and views which revolutionize the norm, previously regarded as typical.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/RejectionOfThePast -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/RejectionOfThePast">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:label xml:lang="en">Rejection of the past</rdfs:label>
+        <skos:definition xml:lang="en">To make clean sweep of the past rethinking what was considered norm and standard according to traditional terms.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/Speed -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/Speed">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:label xml:lang="en">Speed</rdfs:label>
+        <skos:definition xml:lang="en">Rapidity of movement or action. In particular referring to the tranformations of modern life (vehicle, infrastructures, cities, etc.).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://remogrillo.github.io/maco/TechnologyRelatedConcept -->
+
+    <owl:Class rdf:about="https://remogrillo.github.io/maco/TechnologyRelatedConcept">
+        <rdfs:subClassOf rdf:resource="https://remogrillo.github.io/maco/KeyConcept"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://vocab.getty.edu/page/aat/300056068</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Technology-related concept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://remogrillo.github.io/maco/m1 -->
+
+    <owl:NamedIndividual rdf:about="https://remogrillo.github.io/maco/m1">
+        <rdf:type rdf:resource="https://remogrillo.github.io/maco/M01"/>
+        <dc:title>Fondazione e Manifesto del futurismo</dc:title>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/page/Filippo_Tommaso_Marinetti</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1909-02-20</terms:date>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://it.wikisource.org/wiki/I_Manifesti_del_futurismo/Fondazione_e_Manifesto_del_futurismo#pagename7</terms:source>
+        <rdfs:label xml:lang="it">Manifesto del futurismo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/">
+        <terms:publisher rdf:resource="http://purl.org/dc/aboutdcmi#DCMI"/>
+        <terms:title xml:lang="en">Dublin Core Metadata Element Set, Version 1.1</terms:title>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/contributor">
+        <rdfs:label xml:lang="en">Contributor</rdfs:label>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</terms:description>
+        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/coverage">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#coverage-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</terms:description>
+        <rdfs:label xml:lang="en">Coverage</rdfs:label>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+        <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#description-006"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/format">
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Format</rdfs:label>
+        <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
+        <terms:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language">
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
+        <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/publisher">
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#publisher-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+        <terms:description xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/relation">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relation-006"/>
+        <terms:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </terms:description>
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/source">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#source-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:description xml:lang="en">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</terms:description>
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/subject">
+        <terms:description xml:lang="en">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.</terms:description>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+        <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subject-007"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
+        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
